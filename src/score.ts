@@ -1,13 +1,13 @@
 interface Selection {
     quantity: number
 }
-function getPrevQuantity(currentQuantity) {
-    if (currentQuantity <= 0) return 0
-
-    return currentQuantity - 1
-}
 
 export const calculateBlue = ({ quantity }: Selection): number => {
+    function getPrevQuantity(currentQuantity) {
+        if (currentQuantity <= 0) return 0
+        return currentQuantity - 1
+    }
+
     let total = 0
     let prevScore = 0
     for (let i = 0; i <= quantity; i++) {
@@ -25,6 +25,20 @@ export const calculateGreen = ({ quantity }: Selection): number => {
         modifier++
     }
     return total
+}
+
+export const calculateOrange = ({ values }): number => {
+    return values.reduce((total, num, index) => {
+        if (index === 3 || index === 6 || index === 8) {
+            num *= 2
+        }
+
+        if (index === 10) {
+            num *= 3
+        }
+
+        return total + +num
+    }, 0)
 }
 
 export const calculatePurple = ({ values }): number => {
