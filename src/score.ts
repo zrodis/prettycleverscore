@@ -26,3 +26,9 @@ export const calculateGreen = ({ quantity }: Selection): number => {
     }
     return total
 }
+
+export const calculatePurple = ({ values }): number => {
+    return values.reduce((total, num) => {
+        return total + +num
+    }, 0)
+}
