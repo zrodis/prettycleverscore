@@ -1,8 +1,8 @@
-import { calculateYellow } from '../src/score'
+import { add } from '../src/scores'
 
 describe('calculateYellow', () => {
-    it('calculates the score for the blue boxes', () => {
-        expect(calculateYellow({ values: [10, '', '', 20] })).toEqual(30)
-        expect(calculateYellow({ values: [10, 14, 16, 20] })).toEqual(60)
+    it('calculates the score for the yellow boxes using add', () => {
+        expect(add({ values: [10, '', '', 20] })).toEqual(30)
+        expect(add({ values: [10, 14, 16, 20] })).toEqual(60)
     })
 })

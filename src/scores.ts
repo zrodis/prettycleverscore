@@ -2,7 +2,7 @@ interface Selection {
     quantity: number
 }
 
-export const calculateYellow = ({ values }): number => {
+export const add = ({ values }): number => {
     return values.reduce((total, num) => {
         return total + +num
     }, 0)
@@ -43,12 +43,6 @@ export const calculateOrange = ({ values }): number => {
             num *= 3
         }
 
-        return total + +num
-    }, 0)
-}
-
-export const calculatePurple = ({ values }): number => {
-    return values.reduce((total, num) => {
         return total + +num
     }, 0)
 }

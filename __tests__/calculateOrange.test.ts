@@ -1,4 +1,4 @@
-import { calculateOrange } from '../src/score'
+import { calculateOrange } from '../src/scores'
 
 describe('calculateOrange', () => {
     it('calculates the basic addition for the orange boxes', () => {

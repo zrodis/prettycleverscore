@@ -1,9 +1,9 @@
-import { calculatePurple } from '../src/score'
+import { add } from '../src/scores'
 
 describe('calculatePurple', () => {
-    it('calculates the score for the green boxes', () => {
-        expect(calculatePurple({ values: [4, 5, 1, 4, 0] })).toEqual(14)
-        expect(calculatePurple({ values: [6, '6'] })).toEqual(12)
-        expect(calculatePurple({ values: [6, '', ''] })).toEqual(6)
+    it('calculates the score for the purple boxes using add', () => {
+        expect(add({ values: [4, 5, 1, 4, 0] })).toEqual(14)
+        expect(add({ values: [6, '6'] })).toEqual(12)
+        expect(add({ values: [6, '', ''] })).toEqual(6)
     })
 })

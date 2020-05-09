@@ -1,4 +1,4 @@
-import { calculateGreen } from '../src/score'
+import { calculateGreen } from '../src/scores'
 
 describe('calculateGreen', () => {
     it('calculates the score for the green boxes', () => {
