@@ -1,14 +1,10 @@
-interface Selection {
-    quantity: number
-}
-
 export const add = ({ values }): number => {
     return values.reduce((total, num) => {
         return total + +num
     }, 0)
 }
 
-export const calculateBlue = ({ quantity }: Selection): number => {
+export const calculateBlue = ({ quantity }: Quantity): number => {
     function getPrevQuantity(currentQuantity) {
         if (currentQuantity <= 0) return 0
         return currentQuantity - 1
@@ -23,7 +19,7 @@ export const calculateBlue = ({ quantity }: Selection): number => {
     return total
 }
 
-export const calculateGreen = ({ quantity }: Selection): number => {
+export const calculateGreen = ({ quantity }: Quantity): number => {
     let total = 0
     let modifier = 0
     for (let i = 0; i <= quantity; i++) {
@@ -45,4 +41,8 @@ export const calculateOrange = ({ values }): number => {
 
         return total + +num
     }, 0)
+}
+
+interface Quantity {
+    quantity: number
 }
