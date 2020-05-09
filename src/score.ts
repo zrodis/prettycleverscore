@@ -2,6 +2,12 @@ interface Selection {
     quantity: number
 }
 
+export const calculateYellow = ({ values }): number => {
+    return values.reduce((total, num) => {
+        return total + +num
+    }, 0)
+}
+
 export const calculateBlue = ({ quantity }: Selection): number => {
     function getPrevQuantity(currentQuantity) {
         if (currentQuantity <= 0) return 0
